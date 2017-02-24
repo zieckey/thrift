@@ -90,6 +90,7 @@ if(BUILD_CPP)
             message(WARNING "libevent and/or ZLIB and/or OpenSSL not found or disabled; will not build some tests")
         endif()
     endif()
+	add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/zipkin/cpp)
 endif()
 
 if(BUILD_C_GLIB)

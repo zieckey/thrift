@@ -82,7 +82,7 @@ bool THttpClient::parseStatusLine(char* status) {
   }
   *msg = '\0';
 
-  if (strcmp(code, "200") == 0) {
+  if (strcmp(code, "200") == 0 || strcmp(code, "202") == 0) {
     // HTTP 200 = OK, we got the response
     return true;
   } else if (strcmp(code, "100") == 0) {
